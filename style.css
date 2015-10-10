@@ -1,0 +1,138 @@
+.container
+{
+	margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+body 
+{
+border-top:5px solid #2980b9;
+}
+
+header p
+{font-size:50px;
+font-weight:700;
+}
+
+header p.light
+{
+	color:#5c5c5c;
+	font-size:48px;
+
+}
+
+header span.1
+{color:#fff;}
+
+main
+{
+	padding-top:3.5em;
+	padding-bottom:3.5em;
+	padding-right:0px;
+	background-color:#eb4450;
+	
+}
+
+
+header strong{
+	font-weight:900;
+	display:block;
+	font-size:110px;
+}
+
+
+
+header strong span{
+	color:#2980b9;
+}
+
+section
+{padding:100px;}
+
+section.note
+{background-color:#2980b9;
+color:#fff;
+font-size:200px;
+font-size:80px;}
+
+section.basic
+{
+}
+
+section.cv
+{
+	background-color:#000;
+}
+
+#bring
+{background:#18bc9c;}
+
+#bring h2
+{color:#fff;
+padding-top:1em;
+font-size:42;
+text-align:center;
+text-transform:uppercase;}
+
+#bring ul li {
+	padding-left:40px;
+	margin-bottom:22px;
+	color:#e9eff4;
+	line-height: 1.5em;
+	font-size:20px;
+}
+
+#bring ul li:before
+{
+	content: '\f00c';
+	color:#e9eff4;
+	width:40px;
+	margin-left:-40px;
+	display:inline-block;
+}
+
+#skills div.Curly
+{
+	color:red;
+	line-height:100%;
+	font-size:200px;
+	font-weight:100px;
+	font-family: 'Lato', sans-serif;
+}
+
+
+h2:after{
+	content:'';
+	display:block;
+	padding-top:20px;
+	margin:0 auto;
+	width:60px;
+	border-bottom:3px solid #000;
+}
+
+div.centered
+{float:none;
+margin-top:0;
+margin-right:auto}
+
+
+
+
+
+main h1
+{text-align:center;
+color:#fff;
+font-size:40px;
+font-weight:400;}
+
+
+#skills h4
+{font-size:50px;
+}
+
+#skills  h2
+{font-size:50px;
+text-align:center;
+text-transform:uppercase;}
