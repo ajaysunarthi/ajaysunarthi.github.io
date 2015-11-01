@@ -6,9 +6,11 @@ border-top:5px solid #2980b9;
 header div img{
 	max-width:100%;
 	height:auto;
-}
+	}
 
-.container
+header{background:url(background.jpg);}
+	
+	.container
 {
 	margin-right: auto;
     margin-left: auto;
@@ -30,7 +32,7 @@ font-weight:700;
 
 header p.light
 {
-	color:#5c5c5c;
+	color:#4C4B4B;
 	font-size:48px;
 
 }
@@ -76,7 +78,7 @@ section.cv
 
 #Skills
 {
-	background-image:url(SkillsBackground.jpg); 
+	background-image:url(background.jpg); 
 	position:relative;
 	font-family: 'Open Sans', serif;
 	}
@@ -121,7 +123,6 @@ margin-top:10px;}
 	margin-bottom:15px;
 	font-size:18px;}
 	
-	
 #Skills h2{
 	font-size: 42px;
     text-align: center;
@@ -134,12 +135,13 @@ margin-top:10px;}
 
 /***********SECTION BRING******************/
 #bring
-{background:#18bc9c;}
+{background:#18bc9c;
+position:relative;}
 
 #bring h2
 {color:#fff;
 padding-top:1em;
-font-size:42;
+font-size:42px;
 text-align:center;
 text-transform:uppercase;}
 
@@ -149,11 +151,13 @@ text-transform:uppercase;}
 	color:#e9eff4;
 	line-height: 1.5em;
 	font-size:20px;
+	list-style:none;
 }
 
 #bring ul li:before
 {
 	content: '\f00c';
+	font-family: FontAwesome;
 	color:#e9eff4;
 	width:40px;
 	margin-left:-40px;
@@ -175,9 +179,8 @@ h2:after{
 
 #bring div.centered
 {float:none;
-color:black;
-margin-top:0;
-margin-right:auto}
+margin:0 auto;
+color:black;}
 
 
 main h1
@@ -192,7 +195,7 @@ color:#fff;
 margin:20px; }	
 
 #contactMe{
-	background-image:url(SkillsBackground.jpg);
+	background-image:url(background.jpg);
 	}
 
 #contactMe div.centered{
@@ -202,8 +205,8 @@ margin:20px; }
 #contactMe .container{text-align:center;}
 
 #contactMe img{border-radius:100%;
-margin-top:20%;
-margin-bottom:10%;
+margin-top::;
+margin-bottom:5%;
 border: 4px solid red;
 }
 
@@ -216,11 +219,48 @@ padding:0;
 #contactMe li {
     display:inline;
 	padding:6px;
-	margin:6px;
+	margin:3px;
 	}
 #contactMe li a{	
 color:red;}
 
 #contactMe li a:hover{	
 color:black;}
+
+/*********************************/
+
+.btn {
+	margin-top:20px;
+	color:#fff;
+	background-color:black;
+	font-size:13px;
+	font-style:bold;
+	margin:5%; }
+
+.btn :target{
+color:#fff;}
+	
+.btn:hover {
+  background-color : white;
+  color:red;
+  border: 1px solid red;
+  font-style:bold;
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
