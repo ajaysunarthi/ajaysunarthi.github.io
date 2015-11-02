@@ -1,3 +1,4 @@
+
 body 
 {
 border-top:5px solid #2980b9;
@@ -247,20 +248,18 @@ color:#fff;}
   font-style:bold;
 	}
 
+#footer{
+	background-color:#000;
+	text-align:center;
+	padding:0;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+#footer p
+{
+color:#fff;
+height: 24px;
+line-height: 24px;
+font-size:1em;
+}
 
 
