@@ -103,6 +103,15 @@ section.CV
     font-size: 15px;
     font-weight: bold;
 	}
+
+#Skills  ul.shift li:before{
+	    content: '\f00c';
+    color: rgb(41,142,204);
+    font-family: FontAwesome;
+    display: inline-block;
+    width: 40px;
+    margin-left: -40px;
+}
 	
 #Skills  ul.skills li strong{
 	font-size: 18px;
