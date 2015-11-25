@@ -3,8 +3,6 @@ body
 border-top:5px solid #2980b9;
 }
 
-
-
 header div img{
 	max-width:100%;
 	height:auto;
@@ -20,9 +18,13 @@ header{background:#fff;}
     padding-right: 15px;
 }
 
+
 .layer{
 	background-color:rgba(41,142,204,.2);
 }
+
+.layer  h3
+{margin-left:2em;}
 
 /***********HEADER******************/
 
@@ -92,6 +94,7 @@ section.CV
 #Skills  ul.skills li{
 	line-height:43px;
 }	
+	
 	
 #Skills  ul.skills li span
 {	display:block;
@@ -274,6 +277,10 @@ color:#fff;
 height: 24px;
 line-height: 24px;
 font-size:1em;
+}
+
+#CV  .center :hover{
+	background-color:black;
 }
 
 
