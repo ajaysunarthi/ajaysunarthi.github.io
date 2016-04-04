@@ -1,0 +1,22 @@
+.main {
+  padding: 40px 15px;
+  text-align: center;
+  max-width: 730px;
+
+}
+
+.main .table {
+    width: auto;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+.table {
+	margin-top: 30px;
+	outline: none;
+}
+
+.disabled {
+    pointer-events: auto;
+}
