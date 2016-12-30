@@ -1,4 +1,4 @@
-var sourceImage = 'atx.jpg';
+var sourceImage = 'lakegeneva.jpg';
 
 function inkwell() {
     var photo = new Image();
@@ -378,6 +378,6 @@ function process(source) {
     stinson();
 }
 
-process();
+process(sourceImage);
 
 
