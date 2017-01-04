@@ -133,6 +133,10 @@ function pixelMe(options) {
 
     if (options.image.complete) {
         process();
+    }else{
+        options.image.addEventListener('load', function() {
+            process();
+        });
     }
 
 }
