@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>pixelMe</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="center">
+        <h3>Pixel Me</h3>
+    </div>
+    <div class="container">
+        <div class="grid-col">
+            <img src="image.jpg" alt="" id="image">
+        </div>
+        <div class="grid-col" id="target">
+        </div>
+    </div>
+    <div class="options">
+        <input type="file" name="input-img" id="input-img">
+        <label for="input-img">choose an image</label>
+
+        <select id="tileType">
+            <option disabled>choose tile type</option>
+            <option value="circle" selected>circle</option>
+            <option value="rectangle">rectangle</option>
+        </select>
+
+        <select id="tileSize">
+            <option disabled>choose tile size</option>
+            <option value="2">2</option>
+            <option value="3" selected>3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+        </select>
+
+    </div>
+    <script src="pixelMe.js"></script>
+    <script>
+    var img = document.getElementById('image');
+    var input = document.getElementById('input-img');
+    var target = document.getElementById('target');
+    var tileType = document.getElementById('tileType');
+    var tileSize = document.getElementById('tileSize');
+
+    var options = {
+        image: img,
+        targetElement: target,
+        width: img.width,
+        height: img.height
+    };
+
+    pixelMe(options);
+
+    input.addEventListener('change', function(e) {
+        while (target.firstChild) {
+            target.removeChild(target.firstChild);
+        }
+        var selectedFile = e.target.files[0];
+        var reader = new FileReader();
+
+        reader.onload = function(evt) {
+            img.src = evt.target.result;
+            options.width = document.getElementById('image').width;
+            options.height = document.getElementById('image').height;
+            pixelMe(options);
+        }
+
+        reader.readAsDataURL(selectedFile);
+    }, false);
+
+    tileType.addEventListener('change', function() {
+        while (target.firstChild) {
+            target.removeChild(target.firstChild);
+        }
+        options.tileShape = this.options[this.selectedIndex].textContent;
+        pixelMe(options);
+    }, false);
+
+    tileSize.addEventListener('change', function() {
+        while (target.firstChild) {
+            target.removeChild(target.firstChild);
+        }
+        var size = parseInt(this.options[this.selectedIndex].textContent);
+        options.tileWidth = size;
+        options.tileHeight = size;
+        pixelMe(options);
+    }, false);
+    
+    </script>
+</body>
+
+</html>
