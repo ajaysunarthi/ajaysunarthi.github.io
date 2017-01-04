@@ -28,6 +28,10 @@ function pixelMe(options) {
     };
 
     function process() {
+        if (options.width === 0 || options.height === 0) {
+            options.width = options.image.width;
+            options.height = options.image.height;
+        }
         // Number of tiles on x & y in integers
         options.divX = Math.floor(options.width / options.tileWidth);
         options.divY = Math.floor(options.height / options.tileHeight);
