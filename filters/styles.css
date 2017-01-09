@@ -1,6 +1,68 @@
-.demo__option-img {
-    max-width: 150px;
-    height: 150px;
-    display: inline-block;
-    cursor: pointer;
+html,body{
+	margin: 0;
+	padding: 0;
 }
+
+body{
+	padding-bottom: 10px; 
+}
+
+.container{
+	display: flex;
+	flex-flow: row;
+  	flex-wrap: wrap;
+  	justify-content: space-around;
+}
+
+main{
+	position: relative;
+	padding-top: 65px;
+    padding-bottom: 65px;
+    background:linear-gradient(135deg,#562bc1,#ad0361);
+}
+
+main:before{
+	position: absolute;
+	content: '';
+	width: 100%;
+	height: 100%;
+	top:0;
+	opacity: .2;
+	background: url(lakegeneva.jpg);
+	background-position: center; 
+	background-size: cover;
+}
+
+.main{
+	width: 80%;
+	text-align: center;
+	margin: 0 auto;	
+}
+
+canvas{
+	background: black;
+	margin-top: 20px;
+}
+
+#heading{
+	text-align: center;
+    font-size: 24px;
+    color: #fff;
+    font-weight: 400;
+    line-height: 1.7;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.block{
+	flex: 0 0 400px;
+}
+
+.block p{
+	text-align: center;
+	color: #5d5d5d;
+	font-size: 25px;
+	margin-bottom: 5px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+

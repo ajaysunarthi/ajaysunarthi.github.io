@@ -356,8 +356,20 @@ function stinson() {
     photo.src = sourceImage;
 }
 
+function original () {
+    var photo = new Image();
+    photo.src = sourceImage;
+    var canvas = document.getElementById("original");
+    var context = canvas.getContext("2d");
+    photo.onload = function () {
+        context.drawImage(photo, 0, 0, canvas.width, canvas.height);        
+    };
+
+}
+
 function process(source) {
     sourceImage = source;
+    original();
     inkwell();
     walden();
     ninteen();
@@ -379,5 +391,3 @@ function process(source) {
 }
 
 process(sourceImage);
-
-
