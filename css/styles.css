@@ -62,9 +62,15 @@ main {
     background-size: cover;
     min-height: 350px;
     padding: 5.5em 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     position: relative;
     font-family: 'Open Sans', serif;
 }
@@ -75,6 +81,7 @@ main:before {
     top: 0;
     width: 100%;
     height: 100%;
+    background: -webkit-linear-gradient(315deg, rgba(14, 4, 165, 0.4), rgba(247, 3, 14, 0.5));
     background: linear-gradient(135deg, rgba(14, 4, 165, 0.4), rgba(247, 3, 14, 0.5));
 }
 
@@ -221,7 +228,7 @@ h2:after {
 
 #contactMe img {
     border-radius: 100%;
-    margin-top: : ;
+    /*margin-top: : ;*/
     margin-bottom: 5%;
     border: 4px solid white;
 }
@@ -304,9 +311,25 @@ h2:after {
 .blink {
     font-size: 15px;
     background-color: black;
+    animation: beat infinite 2s;
     -webkit-animation-name: beat;
     -webkit-animation-iteration-count: infinite;
     -webkit-animation-duration: 2s;
+}
+
+@keyframes beat {
+    0% {
+        color: #fb023a;
+    }
+    50% {
+        color: #fb023a;
+    }
+    51% {
+        color: black;
+    }
+    100% {
+        color: black;
+    }
 }
 
 @-webkit-keyframes beat {
@@ -340,25 +363,33 @@ h2:after {
 }
 
 .grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     text-align: center;
     font-family: 'Open Sans', serif;
 }
 
 .grid-child {
-    flex-basis: 230px;
+    -ms-flex-preferred-size: 230px;
+        flex-basis: 230px;
     height: 250px;
     background: #fff;
-    color: white;
     margin-top: 20px;
     box-shadow: 0px 1px 35px 0px rgba(0, 0, 0, 0.3);
 }
 
 .work-item {
-    flex-basis: 250px;
+    -ms-flex-preferred-size: 250px;
+        flex-basis: 250px;
     height: 250px;
     color: white;
     margin-top: 20px;
@@ -395,7 +426,8 @@ h2:after {
 
 .work-item:hover {
     background: blueviolet;
-    transition-duration:.8s;
+    -webkit-transition-duration:.8s;
+            transition-duration:.8s;
 }
 
 .work-item a {
@@ -423,7 +455,7 @@ h2:after {
 .coursera {
     background: url(../images/work/ert.png);
     background-size: cover;
-    background-position-x: center;
+    background-position: 50% 0%;
 }
 
 .google-keep {
@@ -636,8 +668,11 @@ h2:after {
 /*....................*/
 
 .flex-grid {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
 }
 
 .flex-left {
@@ -655,8 +690,7 @@ h2:after {
     height: 330px;
     background: url(../images/codepen/quotes3.png);
     background-size: cover;
-    background-position-x: center;
-    background-position-y: center;
+    background-position: 50% 50%;
 }
 
 .flex-left2 {
@@ -664,24 +698,21 @@ h2:after {
     height: 430px;
     background: url(../images/codepen/morse.png);
     background-size: cover;
-    background-position-x: center;
-    background-position-y: center;
+    background-position: 50% 50%;
 }
 
 .flex-left3 {
     width: 100%;
     height: 320px;
     background: url(../images/codepen/card.png);
-    background-position-x: center;
-    background-position-y: center;
+    background-position: 50% 50%;
 }
 
 .flex-left4 {
     background: url(../images/codepen/design.png);
     width: 100%;
     height: 440px;
-    background-position-x: center;
-    background-position-y: center;
+    background-position: 50% 50%;
     background-size: cover;
 }
 
@@ -690,7 +721,7 @@ h2:after {
     width: 100%;
     height: 420px;
     background-size: cover;
-    background-position-y: -40px;
+    background-position: 0 -40px;
 }
 
 .flex-right1 {
@@ -698,8 +729,7 @@ h2:after {
     height: 400px;
     background: url(../images/codepen/modern.png);
     background-size: cover;
-    background-position-x: center;
-    background-position-y: center;
+    background-position: 50% 50%;
 }
 
 .flex-right2 {
@@ -707,8 +737,7 @@ h2:after {
     height: 360px;
     background: url(../images/codepen/fullscr.png);
     background-size: cover;
-    background-position-x: -60px;
-    background-position-y: center;
+    background-position: -60px 50%;
 }
 
 .flex-right3 {
@@ -716,16 +745,14 @@ h2:after {
     width: 100%;
     height: 420px;
     background-size: cover;
-    background-position-x: -60px;
-    background-position-y: center;
+    background-position: -60px 50%;
 }
 
 .flex-right4 {
     background: url(../images/codepen/chatbox.png);
     width: 100%;
     height: 400px;
-    background-position-x: center;
-    background-position-y: center;
+    background-position: 50% 50%;
     /*background-size: cover;*/
 }
 
@@ -733,16 +760,15 @@ h2:after {
     background: url(../images/codepen/blue.png);
     width: 100%;
     height: 360px;
-    background-position-x: center;
-    background-position-y: center;
-    background: cover;
+    background-position: 50% 50%;
+    background-size: cover;
 }
 
 .main1 {
     width: 100%;
     height: 400px;
     background: url(../images/codepen/news.png);
-    background-position-x: center;
+    background-position: 50% 0;
     background-size: cover;
 }
 
@@ -750,8 +776,7 @@ h2:after {
     width: 100%;
     height: 300px;
     background: url(../images/codepen/login.png);
-    background-position-y: center;
-    background-position-x: center;
+    background-position: 50% 50%;
     background-size: cover;
 }
 
@@ -782,9 +807,11 @@ h2:after {
     .flex-left5:hover,.flex-right1:hover,.flex-right2:hover,.flex-right3:hover,
     .flex-right4:hover,.flex-right4:hover,.flex-right5:hover,
     .flex-right5:hover,.main1:hover,.main2:hover {
-        transform: scale(1.1);
+        -webkit-transform: scale(1.1);
+                transform: scale(1.1);
         z-index: 1000;
-        transition-duration: 0.5s
+        -webkit-transition-duration: 0.5s;
+                transition-duration: 0.5s
     }
     .flex-left1:hover .cp-overlay,.flex-left2:hover .cp-overlay,.flex-left3:hover .cp-overlay,.flex-left4:hover .cp-overlay,
     .flex-left5:hover .cp-overlay,.flex-right1:hover .cp-overlay,.flex-right2:hover .cp-overlay,
@@ -897,7 +924,7 @@ h2:after {
 }
 
 @media (max-width: 540px) {
-    .flex-grid {flex-direction: column;}
+    .flex-grid {-webkit-box-orient: vertical;-webkit-box-direction: normal;-ms-flex-direction: column;flex-direction: column;}
     .flex-left {width: 100%;}
     .flex-right {width: 100%;}
     .flex-left1,.flex-left2,.flex-left3,
